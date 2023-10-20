@@ -1,0 +1,24 @@
+{
+  "name": "mymovies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessamillang/ProyectoU2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessamillang/ProyectoU2/issues"
+  },
+  "homepage": "https://github.com/vanessamillang/ProyectoU2#readme"
+}

@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-s8n31$827jk#ip28^%jq9^6xb+nl&e!h=$&g+5tt(3ls3lq@4%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pwalejandro.ddns.net']
+ALLOWED_HOSTS = ['pwalejandro.ddns.net','3.214.201.22']
 
 
 # Application definition
@@ -124,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -1,9 +1,26 @@
-{% if movie_list %}
-    <ul>
-    {% for movie in movie_list%}
-        <li><a href="/movies/{{ movie.id }}/">{{ movie.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No movies are available.</p>
-{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ProyectoU2</title>
+        <link href="{% static 'movies/assets/css/style.css' %} rel="stylesheet">
+</head>
+<body>
+   <h1>MovieMentor</h1>
+   <h3>Lista de peliculas</h3>
+
+   {% if movie_list %}
+      {% for movie in movie_list%}
+          <li>
+             <a href="/movies/{{ movie.id }}/">{{ movie.title }}</a>
+
+             <img src="{% static movie.poster_path %}" alt="">
+
+          </li>
+      
+      {% endfor %}
+  {% else %}
+      <p>No movies are available.</p>
+  {% endif %}
+</body>
+</html>
