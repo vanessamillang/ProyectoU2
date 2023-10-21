@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Agrega estilos personalizados */
+.custom-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  /* Extiende las clases de Tailwind */
+  .btn-custom {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  }

@@ -1,17 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  content: ["*.html"],
+  content: ["./movies/templates/**/*.html", "./movies/static/**/*.css"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Arial', 'sans'],
-        mono: ['Courier New', 'monospace'],
+      spacing: {
+        some_key: '1.5rem',
       },
     },
   },
   plugins: [
-    require ('@tailwind/forms'),
-    require ('@tailwind/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
   ],
-}
+};
 
