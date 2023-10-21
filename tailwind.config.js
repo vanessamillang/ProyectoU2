@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Arial', 'sans'],
+        mono: ['Courier New', 'monospace'],
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require ('@tailwind/forms'),
+    require ('@tailwind/typography'),
+  ],
 }
 

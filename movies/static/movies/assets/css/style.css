@@ -533,3 +533,24 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+/* Estilo para la lista de películas */
+ul {
+  list-style: none;
+  display: flex; /* Muestra los elementos de manera horizontal */
+  flex-wrap: wrap; /* Envuelve las películas a la siguiente fila cuando no caben en la pantalla */
+  justify-content: space-between; /* Espaciado uniforme entre elementos */
+}
+
+/* Estilo para cada película */
+li {
+  flex-basis: calc(33.33% - 1rem); /* Ancho de cada película (ajusta según tus necesidades) */
+  margin: 0.5rem; /* Espaciado entre películas */
+  text-align: center; /* Centra el contenido de cada película */
+}
+
+/* Estilo para la imagen de la película */
+li img {
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  height: auto;
+}

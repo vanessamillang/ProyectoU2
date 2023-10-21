@@ -3,11 +3,11 @@
 <html>
 <head>
     <title>ProyectoU2</title>
-        <link href="{% static 'movies/assets/css/style.css' %} rel="stylesheet">
+    <link href="{% static 'movies/assets/css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-   <h1>MovieMentor</h1>
-   <h3>Lista de peliculas</h3>
+    <h1 class="font-black">MovieMentor</h1>
+    <h3 class="font-normal">Lista de películas</h3>
 
    {% if movie_list %}
       {% for movie in movie_list%}

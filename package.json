@@ -1,7 +1,6 @@
 {
   "name": "mymovies",
   "version": "1.0.0",
-  "description": "",
   "main": "tailwind.config.js",
   "dependencies": {
     "live-server": "^1.2.2",
@@ -9,7 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss build movies/static/movies/assets/css/style.css -o movies/static/movies/assets/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,7 @@
   "bugs": {
     "url": "https://github.com/vanessamillang/ProyectoU2/issues"
   },
-  "homepage": "https://github.com/vanessamillang/ProyectoU2#readme"
+  "homepage": "https://github.com/vanessamillang/ProyectoU2#readme",
+  "keywords": [],
+  "description": ""
 }
