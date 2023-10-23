@@ -9,7 +9,8 @@
 </head>
 <body class="flex flex-col items-center bg-gray-100 min-h-screen font-sans">
     <div class="w-full bg-gray-800 h-2"></div>
-    <div class="max-w-4xl w-full p-8 mt-4 rounded-lg shadow-md text-center" style="background-color: #003153;">
+    <div class="max-w-4xl w-full p-8 mt-4 rounded-lg shadow-md text-center relative bg-cover bg-center bg-no-repeat brightness-60"
+        style="background-image: url('{% static 'movies/assets/img/'|add:movie.poster_path %}'); background-color: rgba(0, 49, 83, 0.7);">
         <h1 class="text-4xl font-serif font-extrabold text-white mb-4">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</h1>
         <div class="flex items-center justify-center">
             <div class="w-1/2 mx-auto">
