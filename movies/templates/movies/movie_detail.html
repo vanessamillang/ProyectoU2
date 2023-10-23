@@ -35,7 +35,7 @@
             <div class="flex flex-wrap justify-center">
                 {% for credit in credits %}
                     <div class="border border-gray-800 rounded-lg text-center p-4 m-2">
-                        <p>{{ credit.person.name }}</p>
+                        <p class="font-bold">{{ credit.person.name }}</p>
                         <p>{{ credit.job.name }}</p>
                     </div>
                 {% endfor %}
