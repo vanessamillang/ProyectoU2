@@ -7,18 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static '/movies/assets/css/output.css' %}" rel="stylesheet">
 </head>
-<body class="flex flex-col items-center bg-gray-100 min-h-screen">
-    <h1 class="text-4xl font-bold mt-8">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</h1>
-    <div class="bg-blue-200 p-4 rounded-lg shadow-md text-center mb-8 w-1/4 mx-auto">
-        <p class="mt-4">{{ movie.overview }}</p>
+<body class="flex flex-col items-center bg-gray-100 min-h-screen font-sans">
+    <div class="w-full bg-gray-800 h-2"></div>
+    <div class="max-w-4xl w-full p-8 mt-4 rounded-lg shadow-md text-center" style="background-color: #003153;">
+        <h1 class="text-4xl font-serif font-extrabold text-white mb-4">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</h1>
+        <div class="flex items-center justify-center">
+            <div class="w-1/2 mx-auto">
+                <img src="{% static 'movies/assets/img'|add:movie.poster_path %}" alt="" class="rounded-md">
+            </div>
+            <div class="bg-blue-200 p-4 rounded-lg shadow-md text-center ml-8 w-1/2">
+                <p>Duración: {{ movie.running_time }} minutos</p>
+                <h2 class="font-serif font-extrabold text-black mt-4">Genero</h2>
+                {% for genre in movie.genres.all %}
+                <p class="px-1"> {{genre.name}}</p>
+                {% endfor %}
+                <h2 class="font-serif font-extrabold text-black mt-4">Descripción</h2>
+                <p class="mt-4">{{ movie.overview }}</p>
+                <h2 class="font-serif font-extrabold text-black mt-4">Información adicional</h2>
+                <p class="mt-4">Presupuesto: $ {{ movie.budget }}</p>
+                <p class="mt-4">Ingresos: $ {{ movie.revenue }}</p>
+                <p class="mt-4">Estreno: {{ movie.release_date|date:"d F Y" }}</p>
+                
+            </div>
+        </div>
+        <h2 class="text-xl font-serif text-white font-extrabold text-center p-10" href="/">Reparto y equipo completo</h2>
+        <div class="bg-blue-200 p-4 rounded-lg shadow-md text-center">
+            <div class="flex flex-wrap justify-center">
+                {% for credit in credits %}
+                    <div class="border border-gray-800 rounded-lg text-center p-4 m-2">
+                        <p>{{ credit.person.name }}</p>
+                        <p>{{ credit.job.name }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    <div class="w-1/4 mx-auto">
-        <img src="{% static 'movies/assets/img'|add:movie.poster_path %}" alt="">
-    </div>
+    <div class="w-full bg-gray-800 h-2 mt-4"></div>
 </body>
 </html>
-
-
-
-
-

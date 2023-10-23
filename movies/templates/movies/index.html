@@ -5,11 +5,11 @@
     <title>ProyectoU2</title>
     <link href="{% static '/movies/assets/css/output.css' %}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen" style="background-color: #003153;">
 
     <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-gray-800">Películas de Proyecto U2</h1>
-        <h3 class="text-lg font-normal text-gray-600">Lista de películas</h3>
+        <h1 class="text-4xl font-extrabold text-white mt-4 font-serif">---MovieMentor---</h1>
+        <h3 class="text-lg font-bold text-gray-600 font-serif">Lista de películas</h3>
     </div>
 
     <div class="flex flex-wrap justify-center">
@@ -18,7 +18,7 @@
                 <div class="w-1/4 p-4">
                     <a href="/movies/{{ movie.id }}/" class="block">
                         <img src="{% static 'movies/assets/img/'|add:movie.poster_path %}" alt="{{ movie.title }}" class="movie-poster">
-                        <div class="mt-2 movie-title">{{ movie.title }}</div>
+                        <div class="mt-2 movie-title text-white font-sans">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</div>
                     </a>
                 </div>
             {% endfor %}
