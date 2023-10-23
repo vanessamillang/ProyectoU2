@@ -15,7 +15,7 @@
     <div class="flex flex-wrap justify-center">
         {% if movie_list %}
             {% for movie in movie_list %}
-                <div class="w-1/4 p-4">
+                <div class="w-1/4 p-4 text-center">
                     <a href="/movies/{{ movie.id }}/" class="block">
                         <img src="{% static 'movies/assets/img/'|add:movie.poster_path %}" alt="{{ movie.title }}" class="movie-poster">
                         <div class="mt-2 movie-title text-white font-sans">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</div>
@@ -28,5 +28,11 @@
     </div>
 </body>
 </html>
+
+
+
+
+
+
 
 
