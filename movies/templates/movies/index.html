@@ -5,28 +5,28 @@
     <title>ProyectoU2</title>
     <link href="{% static '/movies/assets/css/output.css' %}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
 
-    <div class="text-center">
+    <div class="text-center mb-8">
         <h1 class="text-4xl font-bold text-gray-800">Películas de Proyecto U2</h1>
-        <h3 class="text-lg font-normal text-gray-600 mb-8">Lista de películas</h3>
+        <h3 class="text-lg font-normal text-gray-600">Lista de películas</h3>
     </div>
-
 
     <div class="flex flex-wrap justify-center">
         {% if movie_list %}
             {% for movie in movie_list %}
                 <div class="w-1/4 p-4">
-                    <a href="/movies/{{ movie.id }}/">
+                    <a href="/movies/{{ movie.id }}/" class="block">
                         <img src="{% static 'movies/assets/img/'|add:movie.poster_path %}" alt="{{ movie.title }}" class="movie-poster">
                         <div class="mt-2 movie-title">{{ movie.title }}</div>
                     </a>
                 </div>
             {% endfor %}
         {% else %}
-            <p>No movies are available.</p>
+            <p class="text-gray-500">No hay películas disponibles.</p>
         {% endif %}
     </div>
 </body>
 </html>
+
 

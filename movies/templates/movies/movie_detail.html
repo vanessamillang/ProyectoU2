@@ -5,15 +5,20 @@
     <title>{{ movie.title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'movies/assets/css/output.css' %}" rel="stylesheet">
+    <link href="{% static '/movies/assets/css/output.css' %}" rel="stylesheet">
 </head>
-<body class="flex">
-    <div class="mx-auto text-center">
-        <h1 class="text-4xl font-bold">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</h1>
-        <p>{{ movie.overview }}</p>
+<body class="flex flex-col items-center bg-gray-100 min-h-screen">
+    <h1 class="text-4xl font-bold mt-8">{{ movie.title }} ({{ movie.release_date|date:"Y" }})</h1>
+    <div class="bg-blue-200 p-4 rounded-lg shadow-md text-center mb-8 w-1/4 mx-auto">
+        <p class="mt-4">{{ movie.overview }}</p>
     </div>
-    <div class="w-1/4">
+    <div class="w-1/4 mx-auto">
         <img src="{% static 'movies/assets/img'|add:movie.poster_path %}" alt="">
     </div>
 </body>
 </html>
+
+
+
+
+
