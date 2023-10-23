@@ -3,25 +3,30 @@
 <html lang="en">
 <head>
     <title>ProyectoU2</title>
-    <link href="{% static 'movies/output.css' %}" rel="stylesheet">
-
+    <link href="{% static '/movies/assets/css/output.css' %}" rel="stylesheet">
 </head>
-<body>
-    <h1 class="font-black">MovieMentor</h1>
-    <h3 class="font-normal">Lista de películas</h3>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    {% if movie_list %}
-        {% for movie in movie_list %}
-            <div class="movie-container">
-                <a href="/movies/{{ movie.id }}/">
-                    <img src="{% static 'movies/assets/img/'|add:movie.poster_path %}" alt="{{ movie.title }}" class="movie-poster">
-                </a>
-                <div class="movie-title">{{ movie.title }}</div>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>No movies are available.</p>
-    {% endif %}
+    <div class="text-center">
+        <h1 class="text-4xl font-bold text-gray-800">Películas de Proyecto U2</h1>
+        <h3 class="text-lg font-normal text-gray-600 mb-8">Lista de películas</h3>
+    </div>
+
+
+    <div class="flex flex-wrap justify-center">
+        {% if movie_list %}
+            {% for movie in movie_list %}
+                <div class="w-1/4 p-4">
+                    <a href="/movies/{{ movie.id }}/">
+                        <img src="{% static 'movies/assets/img/'|add:movie.poster_path %}" alt="{{ movie.title }}" class="movie-poster">
+                        <div class="mt-2 movie-title">{{ movie.title }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No movies are available.</p>
+        {% endif %}
+    </div>
 </body>
 </html>
 
